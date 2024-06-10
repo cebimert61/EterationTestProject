@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".View.MainActivity">
+
+    <!-- Top Bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/EteratBlue"
+        app:title="E-Market"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Title"
+        app:titleTextColor="@color/white"></androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+
+            android:background="@drawable/search_background_grey"
+            android:padding="12dp"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:textColorHint="@android:color/darker_gray"/>
+    </LinearLayout>
+
+    <!-- Filter Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filters:"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Filter"
+            android:textSize="10dp"
+            android:background="@drawable/filter_button_grey"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Product Grid -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productGrid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bottom_nav_background"
+        app:itemIconTint="@color/bottom_nav_item_color_inactive"
+        app:itemTextColor="@color/bottom_nav_item_color_active"
+        app:menu="@menu/bottom_nav_menu" />
+
+</LinearLayout>

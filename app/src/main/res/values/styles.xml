@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/EteratBlue</item>
+    </style>
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Burada AlertDialog özelliklerini özelleştirebilirsiniz -->
+        <item name="android:background">@color/white</item> <!-- Örnek: arka plan rengi -->
+        <item name="android:textColor">@color/black</item> <!-- Örnek: metin rengi -->
+        <!-- Diğer özelleştirmeler... -->
+    </style>
+
+</resources>
